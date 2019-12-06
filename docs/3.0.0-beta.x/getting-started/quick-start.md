@@ -1,14 +1,16 @@
 # Quick Start Guide
 
-Get ready to get Strapi up and running in **less than 5 minutes** 🚀.
+Get Strapi up and running in **less than 5 minutes** 🚀.
+
+(Before you start, check that [Node.js and npm are properly installed](install-requirements.md) on your machine. Install the latest [Yarn v1.2.0 and package](https://yarnpkg.com/en/).)
 
 <div class="video-container">
 <iframe width="853" height="480" src="https://www.youtube.com/embed/4m1wKzzfs-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-_For a step-by-step guide, please take a look at the [detailed tutorial](quick-start-tutorial.md)._
+_For a step-by-step guide, look at the [detailed tutorial](quick-start-tutorial.md)._
 
-(Before continuing, please make sure [Node.js and npm are properly installed](install-requirements.md) on your machine. You can [install the Yarn v1.2.0+ package here](https://yarnpkg.com/en/).)
+
 
 ## 1. Install Strapi and Create a new project
 
@@ -36,69 +38,72 @@ npx create-strapi-app my-project --quickstart
 
 Navigate to [**http://localhost:1337/admin**](http://localhost:1337/admin).
 
-- Complete the form to create the first **Administrator** user.
+- Complete the form to create the first **Administrative** user profile.
 - Click **Ready to start**.
 
 ## 3. Create a Restaurant Content Type
 
 Navigate to [**PLUGINS** - **Content Type Builder**](http://localhost:1337/admin/plugins/content-type-builder), in the left-hand menu.
 
-- Click the **"+ Add Content Type"** link
-- Enter `restaurant`, and click `Done`
+- Click the **"+ Add Content Type"** link.
+- Enter `restaurant`, and click **Done**
 - A window opens with fields options:
   - Click the **String** field
-  - Type `name` in the **Name** field
-  - Click over to the **ADVANCED SETTINGS** tab, and check the `Required field` and the `Unique field`
+  - Enter `name` in the **Name** field
+  - Click the **ADVANCED SETTINGS** tab, and check the `Required field` and the `Unique field`
   - Click the **"+ Add New Field"** button
   - Click the **Rich Text** field
-  - Type `description` under the **BASE SETTINGS** tab, in the **Name** field
-  - Click `Done`
+  - Enter `description` under the **BASE SETTINGS** tab, in the **Name** field
+  - Click **Done**
 - Click the **Save** button and wait for Strapi to restart
 
 ## 4. Create a Category Content type
 
-Navigate back to [**PLUGINS** - **Content Type Builder**](http://localhost:1337/admin/plugins/content-type-builder), in the left-hand menu.
+Navigate to [**PLUGINS** - **Content Type Builder**](http://localhost:1337/admin/plugins/content-type-builder), in the left-hand menu.
 
 - Click the **"+ Add Content Type"** link
-- Enter `category`, and click `Done`
+- Enter `category`, and click **Done**
 - A window opens with fields options:
   - Click the **String** field
-  - Type `name` under the **BASE SETTINGS** tab, in the **Name** field
-  - Click over to the **ADVANCED SETTINGS** tab, and check the `Required field` and the `Unique field`
+  - Enter `name` under the **BASE SETTINGS** tab, in the **Name** field
+  - Click the **ADVANCED SETTINGS** tab, and check the `Required field` and the `Unique field`
   - Click the **"+ Add New Field"** button
   - Click the **Relation** field
-  - On the right side, click the **Permissions** dropdown and select, `Restaurant`
-  - In the center, select the icon that represents `many-to-many`. The text should read, `Categories has and belongs to many Restaurants`
-  - Click `Done`
+  - On the right side, click the **Permissions** list and select, `Restaurant`
+  - In the center, click the icon that represents `many-to-many`. The text must read, `Categories has and belongs to many Restaurants`
+  - Click **Done**
 - Click the **Save** button and wait for Strapi to restart
 
 ## 5. Add content to "Restaurant" Content Type
 
 Navigate to [**CONTENT TYPES** - **Restaurants**](http://localhost:1337/admin/plugins/content-manager/restaurant?source=content-manager), in the left-hand menu.
 
-- Click on **+ Add New Restaurant** button. Type `Biscotte Restaurant` in the **Restaurant** field. Type `Welcome to Biscotte restaurant! Restaurant Biscotte offers a cuisine based on fresh, quality products, often local, organic when possible, and always produced by passionate producers.` into the **Description** field.
+- Click the **+ Add New Restaurant** button. Type `Biscotte Restaurant` in the **Restaurant** field. 
+- Enter a description such as, `Welcome to Biscotte restaurant! Restaurant Biscotte offers a cuisine based on fresh, quality products, often local, organic when possible, and always produced by passionate producers.` into the **Description** field.
 - Click **Save**.
 
-You will see your restaurant listed in the entries.
+Your restaurant is now listed in the entries.
 
 ## 6. Add categories to the "Category" Content Type
 
 Navigate to [**CONTENT TYPES** - **Categories**](http://localhost:1337/admin/plugins/content-manager/category?source=content-manager).
 
-- Click on **+ Add New Category** button. Type `French Food` in the **Category** field. Select `Biscotte Restaurant`, on the right, from **Restaurant (0)**
+- Click the **+ Add New Category** button. 
+- Enter `French Food` in the **Category** field. 
+- Select `Biscotte Restaurant`, from **Restaurant (0)** on the right-hand side.
 - Click **Save**.
 
-You will see the **French Food** category listed in the entries.
+The **French Food** category is now listed in the entries.
 
-- Click on **+ Add New Category** button. Type `Brunch` in the **Category** field. **DO NOT ADD IT HERE** to `Biscotte Restaurant`.
+- Click the **+ Add New Category** button. Enter `Brunch` in the **Category** field. **DO NOT ADD IT HERE** to `Biscotte Restaurant`.
 - Click **Save**.
 
-You will see the **Brunch** category listed in the entries.
+The **Brunch** category is listed in the entries.
 
-Navigate back to [**CONTENT TYPES** - **Restaurants**](http://localhost:1337/admin/plugins/content-manager/restaurant?source=content-manager).
+Navigate to [**CONTENT TYPES** - **Restaurants**](http://localhost:1337/admin/plugins/content-manager/restaurant?source=content-manager).
 
-- Click on `Biscotte Restaurant`
-- On the right, under **Categories(1)**, `select` the `Add an item...`, and add **Brunch** as a category for this restaurant, and click the **Save** button.
+- Click `Biscotte Restaurant`
+- On the right, under **Categories(1)**, select the `Add an item...`, link and add **Brunch** as a category for this restaurant, and click the **Save** button.
 
 You have now seen **two different ways** to use the **relation** field type to add and connect relations between Content Types.
 
@@ -107,11 +112,11 @@ You have now seen **two different ways** to use the **relation** field type to a
 Navigate to [**PLUGINS** - **Roles & Permissions**](http://localhost:1337/admin/plugins/users-permissions/roles).
 
 - Click the **Public** Role.
-- Scroll down under **Permissions**, find **Restaurant**. Click the checkbox next to **find** and **findone**.
-- Repeat and find **Category**. Click the checkbox next to **find** and **findone**.
+- Scroll to **Permissions**, find **Restaurant**. Select **find** and **findone** checkboxes.
+- Repeat and find **Category**. Select **find** and **findone** checkboxes.
 - Click **Save**.
 
-## 8. Consume the Content Type's API
+## 8. Use the Content Type API in your application
 
 Here we are! The list of **restaurants** is accessible at [`http://localhost:1337/restaurants`](http://localhost:1337/restaurants).
 
