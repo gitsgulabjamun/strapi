@@ -1,16 +1,18 @@
 # Quick Start Guide
 
-Get ready to get Strapi up and running in **less than 5 minutes** 🚀.
+Get Strapi up and running in **less than 5 minutes** 🚀.
+
+(Before you start, check that [Node.js and npm are properly installed](install-requirements.md) on your machine. You can install the [Yarn v1.2.0 and above package here](https://yarnpkg.com/en/).)
 
 <div class="video-container">
 <iframe width="853" height="480" src="https://www.youtube.com/embed/4m1wKzzfs-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-_For a step-by-step guide, please take a look at the [detailed tutorial](quick-start-tutorial.md)._
+_For a step-by-step guide, see the [detailed tutorial](quick-start-tutorial.md)._
 
-(Before continuing, please make sure [Node.js and npm are properly installed](install-requirements.md) on your machine. You can [install the Yarn v1.2.0+ package here](https://yarnpkg.com/en/).)
 
-## 1. Install Strapi and Create a new project
+
+## 1. Install Strapi and Create a New Project
 
 :::: tabs
 
@@ -32,7 +34,7 @@ npx create-strapi-app my-project --quickstart
 
 ::::
 
-## 2. Create an Administrator user
+## 2. Create an Administrative user
 
 Navigate to [**http://localhost:1337/admin**](http://localhost:1337/admin).
 
